@@ -1,0 +1,171 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background: #20251f;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 23px;
+}
+
+.logo span {
+    color: #00FF72;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+nav a:hover {
+    color: #008e40;
+}
+
+.hero {
+    padding: 50px 8%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero div, .hero img {
+    width: 50%;
+}
+
+.hero img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+h2 span, .label {
+    color: #00FF72;
+}
+
+.button {
+    display: inline-block;
+    background: #00FF72;
+    color: #20251f;
+    padding: 11px 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #008e40;
+}
+
+.content {
+    padding: 35px 8%;
+}
+
+.cards {
+    display: flex;
+    gap: 18px;
+}
+
+.cards article {
+    flex: 1;
+    padding: 20px;
+    background: #00FF72;
+    color: #20251f;
+    border-radius: 6px;
+    border-top: 10px solid #20251f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(0, 0, 0);
+    margin: 25px 0;
+}
+
+th, td {
+    border: 1px solid #d5d9d0;
+    padding: 13px;
+}
+
+th {
+    background: #20251f;
+    color: white;
+    text-align: left;
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+.catalog-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background: #20251f;
+    color: white;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    header, .hero, .cards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 0 12px 0 0;
+    }
+
+    .hero div, .hero img {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
