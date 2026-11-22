@@ -1,0 +1,262 @@
+:root {
+    --background: #000000;
+    --text: #ffffff;
+    --surface: #20251f;
+    --accent: #00ff72;
+    --accent-hover: #008e40;
+    --border: #d5d9d0;
+}
+
+html {
+    min-height: 100%;
+}
+
+.page {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page__main {
+    flex: 1;
+}
+
+.header {
+    background: var(--surface);
+    color: var(--text);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 23px;
+}
+
+.logo__accent {
+    color: var(--accent);
+}
+
+.navigation__link {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+.navigation__link:hover {
+    color: var(--accent-hover);
+}
+
+.hero {
+    padding: 50px 8%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero__content, .hero__image {
+    width: 50%;
+}
+
+.hero__image {
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.title {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.hero__accent {
+    color: var(--accent);
+}
+
+.button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--surface);
+    padding: 11px 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: var(--accent-hover);
+}
+
+.content {
+    padding: 35px 8%;
+}
+
+.cards {
+    display: flex;
+    gap: 18px;
+}
+
+.cards__item {
+    flex: 1;
+    padding: 20px;
+    background: var(--accent);
+    color: var(--surface);
+    border-radius: 6px;
+    border-top: 10px solid var(--surface);
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--background);
+    margin: 25px 0;
+}
+
+.product-table__heading, .product-table__cell {
+    border: 1px solid var(--border);
+    padding: 13px;
+}
+
+.product-table__heading {
+    background: var(--surface);
+    color: var(--text);
+    text-align: left;
+}
+
+.product-table__cell--center {
+    text-align: center;
+}
+
+.product-table__cell--right {
+    text-align: right;
+}
+
+.catalog__image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 8px;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .header, .hero, .cards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation__link {
+        margin: 0 12px 0 0;
+    }
+
+    .hero__content, .hero__image {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+}
+
+.footer__link {
+    color: var(--accent);
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+    gap: 30px;
+}
+
+.catalog__section {
+    min-width: 0;
+}
+
+.catalog__image {
+    margin-top: 26px;
+}
+
+.hero__image {
+    animation: hero-float 4s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 24px -12px var(--accent);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 0 40px -8px var(--accent);
+    }
+}
+
+.feedback-form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feedback-form__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+.feedback-form__input:focus-visible,
+.feedback-form__checkbox:focus-visible,
+.feedback-form__submit:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.feedback-form__checkbox {
+    accent-color: var(--accent);
+}
+
+.feedback-form__submit {
+    align-self: flex-start;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+@media (max-width: 850px) {
+    .catalog {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__image {
+        animation: none;
+    }
+}
