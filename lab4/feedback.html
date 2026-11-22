@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITAN NUTRITION — Обратная связь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <header class="header">
+        <h1 class="logo">TITAN <span class="logo__accent">NUTRITION</span></h1>
+        <nav class="navigation">
+            <a class="navigation__link" href="index.html">Главная</a>
+            <a class="navigation__link" href="catalog.html">Каталог</a>
+            <a class="navigation__link" href="about.html">О нас</a>
+            <a class="navigation__link" href="feedback.html">Обратная связь</a>
+        </nav>
+    </header>
+
+    <main class="page__main content">
+        <h2 class="title">Обратная связь</h2>
+        <form class="feedback-form" id="feedback-form">
+            <label for="name">Имя</label>
+            <input class="feedback-form__input" type="text" id="name" name="name" required>
+
+            <label for="email">Электронная почта</label>
+            <input class="feedback-form__input" type="email" id="email" name="email" required>
+
+            <label>
+                <input class="feedback-form__checkbox" type="checkbox" id="consent" name="consent" required>
+                Согласен на обработку персональных данных
+            </label>
+
+            <button class="button feedback-form__submit" type="submit">Отправить</button>
+            <p id="form-status" role="status"></p>
+        </form>
+    </main>
+
+    <footer class="footer">
+        © 2026 TITAN NUTRITION
+        <a href="https://github.com/fruktovi/web6401-gridyaev_oa" target="_blank" class="footer__link">GitHub</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
